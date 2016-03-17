@@ -19,6 +19,10 @@
 
 #include "console-server.h"
 
+const char *console_socket_path = "\0obmc-uart-console";
+const size_t console_socket_path_len = sizeof(console_socket_path);
+const char *console_socket_path_readable;
+
 int write_buf_to_fd(int fd, const uint8_t *buf, size_t len)
 {
 	size_t pos;
