@@ -194,7 +194,7 @@ int main(void)
 {
 	struct console_client _client, *client;
 	struct pollfd pollfds[2];
-	enum process_rc prc;
+	enum process_rc prc = PROCESS_ERR;
 	int rc;
 
 	client = &_client;
